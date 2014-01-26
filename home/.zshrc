@@ -26,7 +26,7 @@ PROMPT='%B________________
 %B\-- %b%(!.%{$fg[red]%}#%{$reset_color%}.%{$fg[green]%}$%{$reset_color%}) '
 
 # End of lines added by compinstall
-
+PATH="$PATH:$HOME/bin"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
