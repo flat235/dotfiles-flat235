@@ -31,5 +31,7 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 alias ls='ls -h --color=auto'
+alias ll='ls -lh --color=auto'
+alias la='ls -lah --color=auto'
 alias su='sudo su -'
 alias tmux='tmux -2'
