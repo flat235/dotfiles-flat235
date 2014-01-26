@@ -12,6 +12,6 @@ homesick / homeshick
 git clone git://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
 echo 'source "$HOME/.homesick/repos/homeshick/homeshick.sh"' >> ~/.zshrc
 echo 'fpath=($HOME/.homesick/repos/homeshick/completions $fpath)' >> ~/.zshrc
-homeshick clone flat235/dotfiles
+homeshick clone flat235/dotfiles-flat235
 ```
 
