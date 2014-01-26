@@ -67,7 +67,7 @@ let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 " imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 " smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 " xmap <C-k>     <Plug>(neosnippet_expand_target)
-imap <expr><C> neosnippet#expandable() ? 
+imap <expr><CR> neosnippet#expandable() ? 
 			\ "\<Plug>(neosnippet_expand)" 
 			\: "\<CR>" 
 
