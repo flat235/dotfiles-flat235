@@ -27,6 +27,9 @@ PROMPT='%B________________
 
 # End of lines added by compinstall
 
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+
 alias ls='ls -h --color=auto'
 alias su='sudo su -'
 alias tmux='tmux -2'
