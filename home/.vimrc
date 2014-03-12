@@ -13,6 +13,8 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'c9s/perlomni.vim'
+Bundle 'bling/vim-airline'
+Bundle 'vim-ruby/vim-ruby'
 
 " colors
 set t_Co=256
@@ -81,6 +83,9 @@ imap <expr><TAB> neosnippet#jumpable() ?
 smap <expr><TAB> neosnippet#jumpable() ?
 			\ "\<Plug>(neosnippet_jump)"
 			\: "\<TAB>"
+
+" airline all the time
+set laststatus=2
 
 " hardcore mode without arrows keys
 inoremap <Left> <Nop>
