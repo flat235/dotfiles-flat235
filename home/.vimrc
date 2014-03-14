@@ -15,6 +15,7 @@ Bundle 'Shougo/neosnippet-snippets'
 Bundle 'c9s/perlomni.vim'
 Bundle 'bling/vim-airline'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/nerdtree'
 
 " colors
 set t_Co=256
@@ -101,3 +102,4 @@ nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 
+autocmd vimenter * NERDTree
