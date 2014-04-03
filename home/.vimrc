@@ -29,6 +29,13 @@ filetype plugin indent on
 " line numbers
 set number
 
+" my mappings
+let mapleader = ","
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+nnoremap <leader>w <C-w>w
+" iabbrev bla blafasel
+
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_min_syntax_length = 3
