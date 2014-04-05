@@ -17,6 +17,7 @@ Bundle 'bling/vim-airline'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
+Bundle 'vimwiki/vimwiki'
 
 " colors
 set t_Co=256
@@ -31,10 +32,12 @@ set number
 
 " my mappings
 let mapleader = ","
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>sv :source $MYVIMRC<cr>
-nnoremap <leader>w <C-w>w
+nnoremap <leader>rce :vsplit $MYVIMRC<cr>
+nnoremap <leader>rcs :source $MYVIMRC<cr>
+nnoremap <leader><TAB> <C-w>w
 " iabbrev bla blafasel
+
+let g:vimwiki_list = [{'path': '~/ownCloud/vimwiki/'}]
 
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
@@ -110,4 +113,4 @@ nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 
-autocmd vimenter * NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
