@@ -1,0 +1,5 @@
+[user]
+	name = Moritz Bellach
+	email = github@moritzbellach.de
+[core]
+	excludesfile = /home/flatline/.gitignore_global

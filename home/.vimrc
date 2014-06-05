@@ -18,10 +18,13 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vimwiki/vimwiki'
+Bundle 'altercation/vim-colors-solarized'
 
 " colors
 set t_Co=256
 colorscheme mustang
+"set background=dark
+"colorscheme solarized
 
 " syntax
 syntax enable
