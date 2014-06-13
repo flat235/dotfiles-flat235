@@ -3,3 +3,5 @@
 	email = github@moritzbellach.de
 [core]
 	excludesfile = /home/flatline/.gitignore_global
+[alias]
+	lg = log --oneline --graph
