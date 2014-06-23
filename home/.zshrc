@@ -3,8 +3,15 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 bindkey -e
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
+# home
+bindkey "^[[1~" beginning-of-line
+# end
+bindkey "^[[4~" end-of-line
+# c-rightarrow
+bindkey "^[OC" forward-word
+# c-leftarrow
+bindkey "^[OD" backward-word
+
 zstyle :compinstall filename '/home/flatline/.zshrc'
 
 autoload -Uz compinit promptinit
