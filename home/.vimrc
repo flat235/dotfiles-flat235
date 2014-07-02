@@ -19,6 +19,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vimwiki/vimwiki'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'TaskList.vim'
 
 " colors
 set t_Co=256
