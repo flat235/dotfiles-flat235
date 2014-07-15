@@ -48,9 +48,8 @@ function install_powerline_precmd() {
 }
 
 install_powerline_precmd
-
-
-PATH="$PATH:$HOME/bin"
+#source "$HOME/.local/lib64/python3.3/site-packages/powerline/bindings/zsh/powerline.zsh"
+PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 

@@ -13,7 +13,7 @@ Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
 Bundle 'Shougo/neosnippet-snippets'
 Bundle 'c9s/perlomni.vim'
-Bundle 'bling/vim-airline'
+"Bundle 'bling/vim-airline'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
@@ -21,6 +21,8 @@ Bundle 'vimwiki/vimwiki'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'TaskList.vim'
+
+set rtp+=~/.local/lib64/python3.3/site-packages/powerline/bindings/vim
 
 " colors
 set t_Co=256
@@ -103,6 +105,7 @@ smap <expr><TAB> neosnippet#jumpable() ?
 
 " airline all the time
 set laststatus=2
+set noshowmode
 
 " hardcore mode without arrows keys
 inoremap <Left> <Nop>
