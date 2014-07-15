@@ -26,13 +26,30 @@ source ~/.zsh/git-prompt/zshrc.sh
 promptinit
 #prompt adam2
 
-PROMPT='%B________________
-%B|-- returned: %?
-%B|-- (%{$fg[green]%}%~%{$reset_color%}%B)%b $(git_super_status)
-%B|-- %(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$fg[cyan]%}@%m%{$reset_color%}
-%B\-- %b%(!.%{$fg[red]%}#%{$reset_color%}.%{$fg[green]%}$%{$reset_color%}) '
+#PROMPT='%B________________
+#%B|-- returned: %?
+#%B|-- (%{$fg[green]%}%~%{$reset_color%}%B)%b $(git_super_status)
+#%B|-- %(!.%{$fg[red]%}.%{$fg[cyan]%})%n%{$fg[cyan]%}@%m%{$reset_color%}
+#%B\-- %b%(!.%{$fg[red]%}#%{$reset_color%}.%{$fg[green]%}$%{$reset_color%}) '
 
 # End of lines added by compinstall
+
+function powerline_precmd() {
+	export PS1="$(~/bin/powerline-shell.py $? --shell zsh 2> /dev/null)"
+}
+
+function install_powerline_precmd() {
+	for s in "${precmd_functions[@]}"; do
+		if [ "$s" = "powerline_precmd" ]; then
+			return
+		fi
+	done
+	precmd_functions+=(powerline_precmd)
+}
+
+install_powerline_precmd
+
+
 PATH="$PATH:$HOME/bin"
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
