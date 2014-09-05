@@ -9,19 +9,16 @@ call vundle#rc()
 " let vundle manage vundle DISABLED: should be handled as submodule by
 " homeshick
 " Bundle 'gmarik/vundle'
-"Bundle 'Shougo/neocomplcache'
-"Bundle 'Shougo/neosnippet'
-"Bundle 'Shougo/neosnippet-snippets'
 Bundle 'c9s/perlomni.vim'
-"Bundle 'bling/vim-airline'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'vimwiki/vimwiki'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'TaskList.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'Lokaltog/vim-easymotion'
 
 set rtp+=~/.local/lib64/python3.3/site-packages/powerline/bindings/vim
 
