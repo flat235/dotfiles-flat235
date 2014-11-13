@@ -9,18 +9,23 @@ call vundle#rc()
 " let vundle manage vundle DISABLED: should be handled as submodule by
 " homeshick
 " Bundle 'gmarik/vundle'
-Bundle 'c9s/perlomni.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-rails'
-Bundle 'scrooloose/nerdtree'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'tpope/vim-fugitive'
-Bundle 'TaskList.vim'
+Bundle 'bling/vim-airline'
+Bundle 'c9s/perlomni.vim'
+Bundle 'fatih/vim-go'
 Bundle 'kien/ctrlp.vim'
-Bundle 'terryma/vim-multiple-cursors'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'TaskList.vim'
+Bundle 'terryma/vim-multiple-cursors'
+Bundle 'tikhomirov/vim-glsl'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'vim-ruby/vim-ruby'
 
-set rtp+=~/.local/lib64/python3.3/site-packages/powerline/bindings/vim
+"set rtp+=~/.local/lib64/python3.3/site-packages/powerline/bindings/vim
 
 " colors
 set t_Co=256
@@ -31,6 +36,11 @@ colorscheme mustang
 " syntax
 syntax enable
 filetype plugin indent on
+
+" search
+set ignorecase
+set smartcase
+set incsearch
 
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <C-x><C-o>
@@ -115,9 +125,9 @@ nnoremap <leader><TAB> <C-w>w
 "" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 "" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
 "" xmap <C-k>     <Plug>(neosnippet_expand_target)
-"imap <expr><CR> neosnippet#expandable() ? 
-"			\ "\<Plug>(neosnippet_expand)" 
-"			\: "\<CR>" 
+"imap <expr><CR> neosnippet#expandable() ?
+"			\ "\<Plug>(neosnippet_expand)"
+"			\: "\<CR>"
 "
 "
 "imap <expr><TAB> neosnippet#jumpable() ?
