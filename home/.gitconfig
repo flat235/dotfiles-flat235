@@ -4,4 +4,4 @@
 [core]
 	excludesfile = /home/flatline/.gitignore_global
 [alias]
-	lg = log --oneline --graph
+	lg = log --oneline --graph --decorate --all
