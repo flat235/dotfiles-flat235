@@ -5,3 +5,5 @@
 	excludesfile = /home/flatline/.gitignore_global
 [alias]
 	lg = log --oneline --graph --decorate --all
+[merge]
+	ff = false
