@@ -77,6 +77,7 @@ let mapleader = ","
 nnoremap <leader>rce :vsplit $MYVIMRC<cr>
 nnoremap <leader>rcs :source $MYVIMRC<cr>
 nnoremap <leader><TAB> <C-w>w
+nnoremap <leader>nt :NERDTreeToggle<cr>
 " iabbrev bla blafasel
 
 
