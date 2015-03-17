@@ -24,6 +24,7 @@ Bundle 'tikhomirov/vim-glsl'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'rodjek/vim-puppet'
 
 "set rtp+=~/.local/lib64/python3.3/site-packages/powerline/bindings/vim
 
