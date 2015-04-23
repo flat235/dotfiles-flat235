@@ -25,7 +25,7 @@ ZSH_THEME="dpoggi"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -44,7 +44,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git tmux)
+plugins=(git tmux mosh)
 
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
@@ -53,7 +53,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
+export PATH=/sbin:/usr/sbin:$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -83,5 +83,3 @@ export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias su='sudo su -'
 alias tmux='tmux -2'
-export GOPATH=$HOME/seafile/My\ Library/inf/go
-PATH="$PATH:$GOPATH/bin"
