@@ -46,14 +46,15 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git tmux)
 
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
-fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
