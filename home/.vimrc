@@ -26,6 +26,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'tpope/vim-surround'
+Bundle 'editorconfig/editorconfig-vim'
 
 " language plugins
 Bundle 'tpope/vim-rails'
