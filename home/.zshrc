@@ -9,3 +9,10 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme dpoggi
 antigen apply
+
+# aliases
+alias su='sudo su -'
+alias tmux='tmux -2'
+alias ls='ls -h'
+alias ll='ls -lh'
+alias la='ls -alh'
