@@ -35,6 +35,7 @@ Bundle 'rodjek/vim-puppet'
 Bundle 'tikhomirov/vim-glsl'
 Bundle 'fatih/vim-go'
 Bundle 'c9s/perlomni.vim'
+Bundle 'digitaltoad/vim-jade'
 
 " themes
 Bundle 'altercation/vim-colors-solarized'
