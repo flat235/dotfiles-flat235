@@ -4,6 +4,12 @@
 [core]
 	excludesfile = /home/flatline/.gitignore_global
 [alias]
-	lg = log --oneline --graph --decorate --all
+	s = status
+	f = fetch
+	a = add
+	b = branch
+	co = checkout
+	cb = checkout -b
+	l = log --oneline --graph --decorate --all
 [merge]
 	ff = false
