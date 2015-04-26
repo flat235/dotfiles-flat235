@@ -6,6 +6,8 @@ fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 source .antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
+antigen bundle mosh
+antigen bundle tmux
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme dpoggi
 antigen apply
@@ -13,6 +15,6 @@ antigen apply
 # aliases
 alias su='sudo su -'
 alias tmux='tmux -2'
-alias ls='ls -h'
-alias ll='ls -lh'
-alias la='ls -alh'
+alias ls='ls -h --color'
+alias ll='ls -lh --color'
+alias la='ls -alh --color'
