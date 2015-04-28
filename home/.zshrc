@@ -3,7 +3,7 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 # antigen zsh plugin management
-source .antigen/antigen.zsh
+source $HOME/.antigen/antigen.zsh
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle mosh
