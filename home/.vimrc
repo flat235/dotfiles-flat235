@@ -36,6 +36,7 @@ Bundle 'tikhomirov/vim-glsl'
 Bundle 'fatih/vim-go'
 Bundle 'c9s/perlomni.vim'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'kovisoft/slimv'
 
 " themes
 Bundle 'altercation/vim-colors-solarized'
