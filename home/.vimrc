@@ -60,6 +60,9 @@ set ignorecase
 set smartcase
 set incsearch
 
+set wildmenu
+set wildmode=list:full,full
+
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <C-x><C-o>
 " enable smart autocomplete (uses ctags!)
@@ -128,7 +131,7 @@ nnoremap <leader>re :edit $MYVIMRC<cr>
 nnoremap <leader>rs :source $MYVIMRC<cr>
 nnoremap <leader><TAB> <C-w>w
 nnoremap <leader>l :NERDTreeToggle<cr>
-nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>o :CtrlPMixed<CR>
 nnoremap <Leader>w :w<CR>
 nnoremap <leader>n :set number!<cr>
 
