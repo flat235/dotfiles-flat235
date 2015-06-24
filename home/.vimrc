@@ -108,7 +108,7 @@ let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
 " Open/close tagbar with \b
-nmap <silent> <leader>b :TagbarToggle<CR>
+nmap <silent> <leader>r :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
@@ -123,12 +123,15 @@ let g:airline#extensions#hunks#non_zero_only = 1
 set number
 
 " my mappings
-let mapleader = ","
-nnoremap <leader>rce :edit $MYVIMRC<cr>
-nnoremap <leader>rcs :source $MYVIMRC<cr>
+let mapleader = "\<SPACE>"
+nnoremap <leader>re :edit $MYVIMRC<cr>
+nnoremap <leader>rs :source $MYVIMRC<cr>
 nnoremap <leader><TAB> <C-w>w
-nnoremap <leader>nt :NERDTreeToggle<cr>
-" iabbrev bla blafasel
+nnoremap <leader>l :NERDTreeToggle<cr>
+nnoremap <Leader>o :CtrlP<CR>
+nnoremap <Leader>w :w<CR>
+nnoremap <leader>n :set number!<cr>
+
 
 
 "let g:neocomplcache_enable_at_startup = 1
