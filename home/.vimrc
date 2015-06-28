@@ -38,6 +38,7 @@ Bundle 'c9s/perlomni.vim'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'kovisoft/slimv'
 Bundle 'spwhitt/vim-nix'
+Bundle 'kchmck/vim-coffee-script'
 " Bundle 'MarcWeber/vim-addon-nix'
 
 " themes
