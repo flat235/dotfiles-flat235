@@ -8,6 +8,9 @@ antigen use oh-my-zsh
 #antigen bundle git
 antigen bundle mosh
 antigen bundle tmux
+antigen bundle meteor
+antigen bundle systemd
+antigen bundle nmap
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen theme dpoggi
 antigen apply
