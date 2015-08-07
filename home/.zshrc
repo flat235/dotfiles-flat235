@@ -23,4 +23,18 @@ alias ls='ls -h --color'
 alias ll='ls -lh --color'
 alias la='ls -alh --color'
 
+function newmet(){
+	meteor create $1
+	cd $1
+	meteor add twbs:bootstrap
+	meteor add accounts-password
+	meteor add coffeescript
+	meteor add ian:accounts-ui-bootstrap-3
+	meteor add mquandalle:jade
+	rm $1.*
+	echo "title $1" > head.tpl.jade
+	echo "div(class=\"container\")" > body.tpl.jade
+	echo "\th1 $1" >> body.tpl.jade
+}
+
 export PATH="$PATH:$HOME/bin"
