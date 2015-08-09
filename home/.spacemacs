@@ -17,12 +17,13 @@
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
-     ;; better-defaults
-     clojure
-     c-c++
+     (auto-completion :variables auto-completion-enable-help-tooltip t)     ;; better-defaults
+     clojure 
+     (c-c++ :variables c-c++-enable-clang-support)
      emacs-lisp
+     evil-commentary
      git
+     github
      ;; go
      ;; haskell
      ;; html
@@ -31,6 +32,7 @@
      ;; lua
      ;; markdown
      org
+     puppet
      python
      ;; ruby
      ;; rust
@@ -39,6 +41,7 @@
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
+     semantic
      syntax-checking
      version-control
      )
@@ -135,7 +138,7 @@ before layers configuration."
    dotspacemacs-fullscreen-use-non-native nil
    ;; If non nil the frame is maximized when Emacs starts up.
    ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
-   ;; (Emacs 24.4+ only)
+   ; (Emacs 24.4+ only)
    dotspacemacs-maximized-at-startup nil
    ;; A value from the range (0..100), in increasing opacity, which describes
    ;; the transparency level of a frame when it's active or selected.
@@ -173,7 +176,10 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
-)
+  (global-linum-mode)
+  (global-aggressive-indent-mode)
+  (setq ace-jump-word-mode-use-query-char nil)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
