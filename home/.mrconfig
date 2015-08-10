@@ -8,7 +8,7 @@ order = 1
 checkout = git clone 'https://github.com/andsens/homeshick.git' 'homeshick'
 
 [.homesick/repos/dotfiles-flat235]
-checkout =  ~/.homesick/repos/homeshick/bin/homeshick clone 'github.com:flat235/dotfiles-flat235.git'
+checkout =  ~/.homesick/repos/homeshick/bin/homeshick clone 'https://github.com:flat235/dotfiles-flat235.git'
 
 [.emacs.d]
 checkout = git clone --recursive 'https://github.com/syl20bnr/spacemacs' '.emacs.d'
