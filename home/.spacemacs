@@ -20,7 +20,7 @@
      (auto-completion :variables auto-completion-enable-help-tooltip t)     ;; better-defaults
      clojure 
      (c-c++ :variables
-            c-c++-enable-clang-support
+            c-c++-enable-clang-support t
             c-c++-default-mode-for-headers 'c++-mode)
      emacs-lisp
      evil-commentary
