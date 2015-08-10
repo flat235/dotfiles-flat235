@@ -3,51 +3,54 @@ set nocompatible
 
 " required by vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let vundle manage vundle DISABLED: should be handled as submodule by
 " homeshick
-" Bundle 'gmarik/vundle'
+" Plugin 'VundleVim/Vundle.vim'
 
 " 'real' plugins
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
-Bundle 'TaskList.vim'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'tpope/vim-fugitive'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-easytags'
-Bundle 'majutsushi/tagbar'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'tpope/vim-surround'
-Bundle 'editorconfig/editorconfig-vim'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic'
+Plugin 'TaskList.vim'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tpope/vim-fugitive'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+Plugin 'majutsushi/tagbar'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'tpope/vim-surround'
+Plugin 'editorconfig/editorconfig-vim'
 
 " language plugins
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'rodjek/vim-puppet'
-Bundle 'tikhomirov/vim-glsl'
-Bundle 'fatih/vim-go'
-Bundle 'c9s/perlomni.vim'
-Bundle 'digitaltoad/vim-jade'
-" Bundle 'kovisoft/slimv'
-Bundle 'spwhitt/vim-nix'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-fireplace'
-Bundle 'guns/vim-clojure-static'
-Bundle 'guns/vim-clojure-highlight'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'vim-scripts/paredit.vim'
-" Bundle 'MarcWeber/vim-addon-nix'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'rodjek/vim-puppet'
+Plugin 'tikhomirov/vim-glsl'
+Plugin 'fatih/vim-go'
+Plugin 'c9s/perlomni.vim'
+Plugin 'digitaltoad/vim-jade'
+" Plugin 'kovisoft/slimv'
+Plugin 'spwhitt/vim-nix'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-fireplace'
+Plugin 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'vim-scripts/paredit.vim'
+" Plugin 'MarcWeber/vim-addon-nix'
 
 " themes
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+
+call vundle#end()
+
 " colors
 set t_Co=256
 colorscheme mustang
