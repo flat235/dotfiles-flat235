@@ -181,6 +181,8 @@ layers configuration."
   (global-linum-mode)
   (global-aggressive-indent-mode)
   (setq ace-jump-word-mode-use-query-char nil)
+  (setq tramp-shell-prompt-pattern"\\(?:^\\|\\)[^:#$%>\n]*[:#$%>»] *\\(\\[[0-9;]*[a-zA-Z] *\\)*" )
+  ;; (eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
