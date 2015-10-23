@@ -27,6 +27,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'jreybert/vimagit'
 
 " language plugins
 Plugin 'tpope/vim-rails'
@@ -34,7 +35,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'rodjek/vim-puppet'
 Plugin 'tikhomirov/vim-glsl'
 Plugin 'fatih/vim-go'
-Plugin 'c9s/perlomni.vim'
+Plugin 'vim-perl/vim-perl'
 Plugin 'digitaltoad/vim-jade'
 " Plugin 'kovisoft/slimv'
 Plugin 'spwhitt/vim-nix'
@@ -45,6 +46,9 @@ Plugin 'guns/vim-clojure-highlight'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'vim-scripts/paredit.vim'
 " Plugin 'MarcWeber/vim-addon-nix'
+Plugin 'Shougo/vimproc.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi' " also typescript stuff
 
 " themes
 Plugin 'altercation/vim-colors-solarized'
@@ -72,24 +76,11 @@ set incsearch
 set wildmenu
 set wildmode=list:full,full
 
-inoremap <C-Space> <C-x><C-o>
-inoremap <C-@> <C-x><C-o>
 " enable smart autocomplete (uses ctags!)
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
-" change enter key to insert completion:
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" escape to exit completion
-inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
-" up/down arrow to select
-inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
-inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-" scroll with page up/down
-inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 " C-p
-let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
@@ -119,8 +110,6 @@ let g:easytags_resolve_links = 1
 let g:easytags_suppress_ctags_warning = 1
 
 " ----- majutsushi/tagbar settings -----
-" Open/close tagbar with \b
-nmap <silent> <leader>r :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
@@ -133,93 +122,58 @@ let g:airline#extensions#hunks#non_zero_only = 1
 
 " line numbers
 set number
+set relativenumber
 
 " my mappings
 let mapleader = "\<SPACE>"
-nnoremap <leader>re :edit $MYVIMRC<cr>
-nnoremap <leader>rs :source $MYVIMRC<cr>
-nnoremap <leader><TAB> <C-w>w
-nnoremap <leader>l :NERDTreeToggle<cr>
-nnoremap <Leader>o :CtrlPMixed<CR>
-nnoremap <Leader>w :w<CR>
-nnoremap <leader>n :set number!<cr>
 
+" autocompletion stuff
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-x><C-o>
+" change enter key to insert completion:
+inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" escape to exit completion
+inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
+" up/down arrow to select
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+" scroll with page up/down
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
+let g:ctrlp_map = '<c-p>'
 
-"let g:neocomplcache_enable_at_startup = 1
-"let g:neocomplcache_enable_smart_case = 1
-"let g:neocomplcache_min_syntax_length = 3
-"let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-"if !exists('g:neocomplcache_keyword_patterns')
-"	let g:neocomplcache_keyword_patterns = {}
-"endif
-"let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
-"inoremap <expr><C-g>     neocomplcache#undo_completion()
-"inoremap <expr><C-l>     neocomplcache#complete_common_string()
-"
-"" Recommended key-mappings.
-"" <CR>: close popup and save indent.
-"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-"function! s:my_cr_function()
-"	return neocomplcache#smart_close_popup() . "\<CR>"
-"" For no inserting <CR> key.
-""	return pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-"endfunction
-""       " <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-""       " <C-h>, <BS>: close popup and delete backword char.
-"noremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
-"noremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
-"noremap <expr><C-y>  neocomplcache#close_popup()
-"noremap <expr><C-e>  neocomplcache#cancel_popup()
-"" Enable omni completion.
-"autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
-"autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-"autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
-"autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
-"autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-"" Enable heavy omni completion.
-"if !exists('g:neocomplcache_omni_patterns')
-"	let g:neocomplcache_omni_patterns = {}
-"endif
-"let g:neocomplcache_omni_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplcache_omni_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplcache_omni_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"let g:neocomplcache_omni_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
-"
-"" neosnippet
-"" imap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"" smap <C-k>     <Plug>(neosnippet_expand_or_jump)
-"" xmap <C-k>     <Plug>(neosnippet_expand_target)
-"imap <expr><CR> neosnippet#expandable() ?
-"			\ "\<Plug>(neosnippet_expand)"
-"			\: "\<CR>"
-"
-"
-"imap <expr><TAB> neosnippet#jumpable() ?
-"			\ "\<Plug>(neosnippet_jump)"
-"			\: pumvisible() ? "\<C-n>" : "\<TAB>"
-"smap <expr><TAB> neosnippet#jumpable() ?
-"			\ "\<Plug>(neosnippet_jump)"
-"			\: "\<TAB>"
-"
+" file commands
+nnoremap <Leader>ff :CtrlP<CR>
+nnoremap <Leader>fs :w<CR>
+nnoremap <leader>feo :edit $MYVIMRC<cr>
+nnoremap <leader>fes :source $MYVIMRC<cr>
+" toggles
+nnoremap <leader>tt :NERDTreeToggle<cr>
+nnoremap <silent><leader>tn :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<cr>
+nnoremap <silent><leader>tb :TagbarToggle<CR>
+" window management
+nnoremap <silent><leader>ws :split<cr>
+nnoremap <silent><leader>wv :vsplit<cr>
+nnoremap <silent><leader>wc :close<cr>
+nnoremap <silent><leader>wh :wincmd h<cr>
+nnoremap <silent><leader>wj :wincmd j<cr>
+nnoremap <silent><leader>wk :wincmd k<cr>
+nnoremap <silent><leader>wl :wincmd l<cr>
+" quickfix window
+nnoremap <silent><leader>wq :cwindow<cr>
+" buffer management
+nnoremap <silent><leader>bd :bd<cr>
+nnoremap <silent><leader>bf :CtrlPBuffer<cr>
+nnoremap <silent><leader>bl :buffers<cr>:buffer<space>
+
+" escape is to far away
+inoremap jk <esc>
+inoremap <esc> nop
+
 " airline all the time
 set laststatus=2
 set noshowmode
 
-" hardcore mode without arrows keys
-" basically learned to live without, might conflict with other stuff
-"inoremap <Left> <Nop>
-"inoremap <Right> <Nop>
-"inoremap <Up> <Nop>
-"inoremap <Down> <Nop>
-"vnoremap <Left> <Nop>
-"vnoremap <Right> <Nop>
-"vnoremap <Up> <Nop>
-"vnoremap <Down> <Nop>
-"nnoremap <Left> <Nop>
-"nnoremap <Right> <Nop>
-"nnoremap <Up> <Nop>
-"nnoremap <Down> <Nop>
-
+" open NerdTree if no file name was given
 autocmd vimenter * if !argc() | NERDTree | endif
