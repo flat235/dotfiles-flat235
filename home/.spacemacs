@@ -21,12 +21,13 @@
      clojure 
      (c-c++ :variables
             c-c++-enable-clang-support t
-            c-c++-default-mode-for-headers 'c++-mode)
+            c-c++-default-mode-for-headers 'c++-mode
+            )
      emacs-lisp
      evil-commentary
      git
      github
-     ;; go
+     go
      ;; haskell
      ;; html
      ;; javascript
@@ -37,7 +38,7 @@
      puppet
      python
      ;; ruby
-     ;; rust
+     rust
      ;; sql
      extra-langs ;; nix, yaml!
      ;; (shell :variables
