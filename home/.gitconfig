@@ -12,3 +12,5 @@
 	cb = checkout -b
 	d = diff
 	l = log --oneline --graph --decorate --all
+[push]
+	default = simple
