@@ -51,18 +51,15 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi' " also typescript stuff
 
 " themes
-Plugin 'altercation/vim-colors-solarized'
+"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'chriskempson/base16-vim'
 
 call vundle#end()
 
 " colors
 set t_Co=256
+set background=dark
 colorscheme mustang
-"set background=dark
-"colorscheme solarized
-
-"set rtp+=~/.local/lib64/python3.3/site-packages/powerline/bindings/vim
-
 
 " syntax
 syntax enable
@@ -169,7 +166,7 @@ nnoremap <silent><leader>bl :buffers<cr>:buffer<space>
 
 " escape is to far away
 inoremap jk <esc>
-inoremap <esc> nop
+inoremap <esc> <nop>
 
 " airline all the time
 set laststatus=2
