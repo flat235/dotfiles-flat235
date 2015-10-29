@@ -49,6 +49,7 @@ Plugin 'vim-scripts/paredit.vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi' " also typescript stuff
+Plugin 'rust-lang/rust.vim'
 
 " themes
 "Plugin 'altercation/vim-colors-solarized'

@@ -33,6 +33,8 @@ alias th='ta `hostname` || ts `hostname`'
 alias ls='ls -h --color'
 alias ll='ls -lh --color'
 alias la='ls -alh --color'
+alias rm='rm -I'
+alias trash='kfmclient move "$@" trash:/'
 
 function newmet(){
 	meteor create $1
