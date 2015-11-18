@@ -169,6 +169,12 @@ nnoremap <silent><leader>bl :buffers<cr>:buffer<space>
 inoremap jk <esc>
 inoremap <esc> <nop>
 
+" experimental movement remappings
+noremap H b
+noremap L w
+noremap J )
+noremap K (
+
 " airline all the time
 set laststatus=2
 set noshowmode
