@@ -28,6 +28,7 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jreybert/vimagit'
+Plugin 'Chiel92/vim-autoformat'
 
 " language plugins
 Plugin 'tpope/vim-rails'
@@ -50,6 +51,9 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Quramy/tsuquyomi' " also typescript stuff
 Plugin 'rust-lang/rust.vim'
+" auto formating for rust
+let g:formatdef_rustfmt = '"rustfmt"'
+let g:formatters_rust = ['rustfmt']
 
 " themes
 "Plugin 'altercation/vim-colors-solarized'
@@ -77,6 +81,9 @@ set wildmode=list:full,full
 " enable smart autocomplete (uses ctags!)
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
+
+" use rust auto formating
+let g:rustfmt_autosave = 1
 
 " C-p
 let g:ctrlp_cmd = 'CtrlP'
@@ -181,3 +188,4 @@ set noshowmode
 
 " open NerdTree if no file name was given
 autocmd vimenter * if !argc() | NERDTree | endif
+autocmd BufWrite * :Autoformat

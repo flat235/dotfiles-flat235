@@ -40,3 +40,7 @@ Thumbs.db
 ##################
 *~
 
+
+# Codenvy files
+.codenvy/misc.xml
+.vfs/

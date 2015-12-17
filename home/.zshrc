@@ -1,12 +1,12 @@
 # save emacs!
 if [[ "$TERM" == "dumb" ]]
 then
-  unsetopt zle
-  unsetopt prompt_cr
-  unsetopt prompt_subst
-  unfunction precmd
-  unfunction preexec
-  PS1='$ '
+	unsetopt zle
+	unsetopt prompt_cr
+	unsetopt prompt_subst
+	unfunction precmd
+	unfunction preexec
+	PS1='$ '
 fi
 
 # homes(h)ick dotfile management
@@ -36,18 +36,22 @@ alias la='ls -alh --color'
 alias rm='rm -I'
 alias trash='kfmclient move "$@" trash:/'
 
-function newmet(){
-	meteor create $1
-	cd $1
-	meteor add twbs:bootstrap
-	meteor add accounts-password
-	meteor add coffeescript
-	meteor add ian:accounts-ui-bootstrap-3
-	meteor add mquandalle:jade
-	rm $1.*
-	echo "title $1" > head.tpl.jade
-	echo "div(class=\"container\")" > body.tpl.jade
-	echo "\th1 $1" >> body.tpl.jade
+function greppkg(){
+grep -R $1 /etc/portage/
 }
 
-export PATH="$PATH:$HOME/bin"
+function newmet(){
+meteor create $1
+cd $1
+meteor add twbs:bootstrap
+meteor add accounts-password
+meteor add coffeescript
+meteor add ian:accounts-ui-bootstrap-3
+meteor add mquandalle:jade
+rm $1.*
+echo "title $1" > head.tpl.jade
+echo "div(class=\"container\")" > body.tpl.jade
+echo "\th1 $1" >> body.tpl.jade
+}
+
+export PATH="$PATH:$HOME/bin:$HOME/.cargo/bin"
