@@ -6,9 +6,10 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
-" let vundle manage vundle DISABLED: should be handled as submodule by
-" homeshick
-" Plugin 'VundleVim/Vundle.vim'
+" let vundle manage vundle
+" TODO: this or via homeshick/mr?
+
+Plugin 'VundleVim/Vundle.vim'
 
 " 'real' plugins
 Plugin 'bling/vim-airline'
@@ -29,27 +30,34 @@ Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'jreybert/vimagit'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'vimwiki/vimwiki'
 
 " language plugins
-Plugin 'tpope/vim-rails'
+" fish (shell) plugin + settings
+Plugin 'dag/vim-fish'
+" Plugin 'tpope/vim-rails'
+" sometimes sysadm / puppet
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'rodjek/vim-puppet'
-Plugin 'tikhomirov/vim-glsl'
-Plugin 'fatih/vim-go'
+" Plugin 'tikhomirov/vim-glsl'
+" Plugin 'fatih/vim-go'
+" for sysadm stuff
 Plugin 'vim-perl/vim-perl'
-Plugin 'digitaltoad/vim-jade'
+" Plugin 'digitaltoad/vim-jade'
 " Plugin 'kovisoft/slimv'
-Plugin 'spwhitt/vim-nix'
-Plugin 'kchmck/vim-coffee-script'
+" Plugin 'spwhitt/vim-nix'
+" Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-fireplace'
-Plugin 'guns/vim-clojure-static'
-Plugin 'guns/vim-clojure-highlight'
-Plugin 'kien/rainbow_parentheses.vim'
-Plugin 'vim-scripts/paredit.vim'
+" Plugin 'guns/vim-clojure-static'
+" Plugin 'guns/vim-clojure-highlight'
+" Plugin 'kien/rainbow_parentheses.vim'
+" Plugin 'vim-scripts/paredit.vim'
 " Plugin 'MarcWeber/vim-addon-nix'
 Plugin 'Shougo/vimproc.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi' " also typescript stuff
+" Plugin 'leafgarland/typescript-vim'
+" Plugin 'Quramy/tsuquyomi' " also typescript stuff
+" lua plugin needs vim-misc
+Plugin 'xolox/vim-lua-ftplugin'
 Plugin 'rust-lang/rust.vim'
 " auto formating for rust
 let g:formatdef_rustfmt = '"rustfmt"'
@@ -89,9 +97,9 @@ let g:rustfmt_autosave = 1
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll)$',
-  \ }
+			\ 'dir':  '\v[\/]\.(git|hg|svn)$',
+			\ 'file': '\v\.(exe|so|dll)$',
+			\ }
 " example link to exclude
 "  \ 'link': 'some_bad_symbolic_links',
 
@@ -124,6 +132,8 @@ hi clear SignColumn
 " In vim-airline, only display "hunks" if the diff is non-zero
 let g:airline#extensions#hunks#non_zero_only = 1
 
+" vimwiki config
+let g:vimwiki_list = [{'path': '~/ownCloud/vimwiki/'}]
 
 " line numbers
 set number
@@ -148,11 +158,12 @@ inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
 
 let g:ctrlp_map = '<c-p>'
 
+" commands should be the same as spacemacs
 " file commands
 nnoremap <Leader>ff :CtrlP<CR>
 nnoremap <Leader>fs :w<CR>
-nnoremap <leader>feo :edit $MYVIMRC<cr>
-nnoremap <leader>fes :source $MYVIMRC<cr>
+nnoremap <leader>fed :edit $MYVIMRC<cr>
+nnoremap <leader>feR :source $MYVIMRC<cr>
 " toggles
 nnoremap <leader>tt :NERDTreeToggle<cr>
 nnoremap <silent><leader>tn :let [&nu, &rnu] = [!&rnu, &nu+&rnu==1]<cr>
@@ -169,18 +180,16 @@ nnoremap <silent><leader>wl :wincmd l<cr>
 nnoremap <silent><leader>wq :cwindow<cr>
 " buffer management
 nnoremap <silent><leader>bd :bd<cr>
-nnoremap <silent><leader>bf :CtrlPBuffer<cr>
+nnoremap <silent><leader>bb :CtrlPBuffer<cr>
 nnoremap <silent><leader>bl :buffers<cr>:buffer<space>
+nnoremap <silent><leader>bn :bn<cr>
+nnoremap <silent><leader>bp :bp<cr>
 
 " escape is to far away
 inoremap jk <esc>
-inoremap <esc> <nop>
+" inoremap <esc> <nop>
 
-" experimental movement remappings
-noremap H b
-noremap L w
-noremap J )
-noremap K (
+nnoremap <leader>wl <Plug>VimwikiUISelect
 
 " airline all the time
 set laststatus=2
