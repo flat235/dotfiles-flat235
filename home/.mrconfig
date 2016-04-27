@@ -1,14 +1,13 @@
 
-[.homesick/repos/myrepos]
-order = 0
-checkout = git clone 'https://github.com/joeyh/myrepos.git' 'myrepos'
-
 [.homesick/repos/homeshick]
-order = 1
+order = 0
 checkout = git clone 'https://github.com/andsens/homeshick.git' 'homeshick'
 
 [.homesick/repos/dotfiles-flat235]
-checkout = ~/.homesick/repos/homeshick/bin/homeshick clone 'https://github.com/flat235/dotfiles-flat235.git' 'dotfiles-flat235'
+order = 1
+checkout =
+         git clone 'https://github.com/flat235/dotfiles-flat235.git' 'dotfiles-flat235'
+         ~/.homesick/repos/homeshick/bin/homeshick -f link dotfiles-flat235
 
 [.emacs.d]
 checkout = git clone --recursive 'https://github.com/syl20bnr/spacemacs' '.emacs.d'
