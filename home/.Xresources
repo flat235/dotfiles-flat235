@@ -1,3 +1,4 @@
 xterm*background:       black
 xterm*foreground:       white
 Xcursor*theme:          ComixCursors-Red-Huge
+Emacs.font:		hack-11
