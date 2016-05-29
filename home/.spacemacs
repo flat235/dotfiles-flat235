@@ -172,6 +172,9 @@
   ;; specified with an installed package.
   ;; Not used for now.
   dotspacemacs-default-package-repository nil
+
+  ;; rust code completion
+  rust-enable-racer t
   )
   ;; User initialization goes here
   )
