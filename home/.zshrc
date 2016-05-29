@@ -39,4 +39,5 @@ grep -R $1 /etc/portage/
 }
 
 export PATH="$PATH:$HOME/bin:$HOME/.cargo/bin"
-export RUST_SRC_PATH="/usr/local/src/rustc-1.8.0/src"
+RUST_VERSION=`rustc --version |awk '{print $2}'`
+export RUST_SRC_PATH="/usr/local/src/rustc-${RUST_VERSION}/src"
