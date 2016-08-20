@@ -25,5 +25,8 @@ let g:dotspacevim_excluded_plugins = []
 let mapleader = ' '
 let g:leaderGuide_vertical = 1
 
+" personal customization
+colorscheme mustang
+
 " This must be the end of the file
 call spacevim#bootstrap()
