@@ -9,11 +9,5 @@ checkout =
          git clone 'https://github.com/flat235/dotfiles-flat235.git' 'dotfiles-flat235'
          ~/.homesick/repos/homeshick/bin/homeshick -f link dotfiles-flat235
 
-[.emacs.d]
-checkout = git clone --recursive 'https://github.com/syl20bnr/spacemacs' '.emacs.d'
-
-[.vim/bundle/Vundle.vim]
-checkout = git clone 'https://github.com/VundleVim/Vundle.vim.git' 'Vundle.vim'
-
 [.antigen]
 checkout = git clone 'https://github.com/zsh-users/antigen.git' '.antigen'
