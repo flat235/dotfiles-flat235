@@ -27,6 +27,8 @@ let g:leaderGuide_vertical = 1
 
 " personal customization
 colorscheme mustang
+set number
+set relativenumber
 
 " This must be the end of the file
 call spacevim#bootstrap()
