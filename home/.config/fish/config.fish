@@ -1,2 +1,2 @@
 source $HOME/.homesick/repos/homeshick/homeshick.fish
-set PATH $HOME/.cargo/bin $PATH
+set PATH $HOME/bin $HOME/.cargo/bin $PATH
