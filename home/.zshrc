@@ -28,7 +28,7 @@ antigen apply
 # aliases
 alias su='sudo su -'
 alias tmux='tmux -2'
-alias th='ta `hostname` || ts `hostname`'
+alias th='ta `hostname -s` || ts `hostname -s`'
 alias ls='ls -h --color'
 alias ll='ls -lh --color'
 alias la='ls -alh --color'
