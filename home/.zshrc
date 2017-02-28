@@ -22,6 +22,7 @@ antigen bundle tmux
 antigen bundle systemd
 antigen bundle nmap
 antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
 antigen theme dpoggi
 antigen apply
 
