@@ -1,5 +1,7 @@
 #!/bin/bash
 mkdir -p ~/bin
-curl -L https://raw.githubusercontent.com/joeyh/myrepos/master/mr -o ~/bin/mr
-chmod 755 ~/bin/mr
-~/bin/mr --trust-all bootstrap https://raw.githubusercontent.com/flat235/dotfiles-flat235/master/home/.mrconfig
+mkdir -p ~/.homesick/repos
+git clone 'https://github.com/andsens/homeshick.git' ~/.homesick/repos/homeshick
+git clone 'https://github.com/zsh-users/antigen.git' .antigen
+~/.homesick/repos/homeshick/bin/homeshick clone dotfiles-flat235
+~/.homesick/repos/homeshick/bin/homeshick -f link dotfiles-flat235
