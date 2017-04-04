@@ -14,9 +14,7 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 # antigen zsh plugin management
-if [[ -d $HOME/.antigen ]]; then
-	echo "antigen already installed, proceeding"
-else
+if [[ ! -d $HOME/.antigen ]]; then
 	git clone 'https://github.com/zsh-users/antigen.git' $HOME/.antigen
 fi
 source $HOME/.antigen/antigen.zsh
