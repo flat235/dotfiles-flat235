@@ -15,7 +15,8 @@ fpath=($HOME/.homesick/repos/homeshick/completions $fpath)
 
 # antigen zsh plugin management
 if [[ ! -d $HOME/.antigen ]]; then
-	git clone 'https://github.com/zsh-users/antigen.git' $HOME/.antigen
+	mkdir $HOME/.antigen
+	curl https://cdn.rawgit.com/zsh-users/antigen/v1.4.1/bin/antigen.zsh > $HOME/.antigen/antigen.zsh
 fi
 source $HOME/.antigen/antigen.zsh
 antigen use oh-my-zsh
@@ -26,7 +27,8 @@ antigen bundle systemd
 antigen bundle nmap
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
-antigen theme dpoggi
+#antigen theme dpoggi
+antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 antigen apply
 
 # aliases
