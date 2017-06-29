@@ -32,7 +32,7 @@ antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 antigen apply
 
 # aliases
-alias su='sudo su -'
+alias sudosu='sudo su -'
 alias tmux='tmux -2'
 alias th='ta `hostname -s` || ts `hostname -s`'
 alias ls='ls -h --color'
