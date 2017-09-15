@@ -36,9 +36,9 @@ alias sudosu='sudo su -'
 alias tmux='tmux -2'
 alias th='ta `hostname -s` || ts `hostname -s`'
 
-if [[ uname -eq 'Linux' ]]; then
+if [[ $(uname) == 'Linux' ]]; then
 	alias ls='ls -h --color'
-elif [[ uname -eq 'FreeBSD' ]]; then
+elif [[ $(uname) == 'FreeBSD' ]]; then
 	alias ls='ls -h -G'
 else
 	echo "I have no 'ls'-alias for $(uname), please add one to $HOME/.zshrc"
