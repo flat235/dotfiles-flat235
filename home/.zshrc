@@ -35,7 +35,15 @@ antigen apply
 alias su='sudo su -'
 alias tmux='tmux -2'
 alias th='ta `hostname -s` || ts `hostname -s`'
-alias ls='ls -h --color'
+
+if [[ uname -eq 'Linux' ]]; then
+	alias ls='ls -h --color'
+elif [[ uname -eq 'FreeBSD' ]]; then
+	alias ls='ls -h -G'
+else
+	echo "I have no 'ls'-alias for $(uname), please add one to $HOME/.zshrc"
+fi
+
 alias ll='ls -lh --color'
 alias la='ls -alh --color'
 alias rm='rm -i' # use trash-cli instead
