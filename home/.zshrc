@@ -54,6 +54,9 @@ grep -R $1 /etc/portage/
 
 export PATH="$PATH:$HOME/bin:$HOME/.cargo/bin"
 
+# keepass ssh agent integration
+export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keeagent.socket
+
 # history settings
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
