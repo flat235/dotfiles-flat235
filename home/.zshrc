@@ -51,8 +51,11 @@ alias rm='rm -i' # use trash-cli instead
 function greppkg(){
 grep -R $1 /etc/portage/
 }
+ function telnets(){
+	 openssl s_client -connect $1:$2
+ }
 
-export PATH="$PATH:$HOME/bin:$HOME/.cargo/bin"
+export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
 
 # keepass ssh agent integration
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keeagent.socket
