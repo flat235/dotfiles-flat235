@@ -40,6 +40,8 @@ if [[ $(uname) == 'Linux' ]]; then
 	alias ls='ls -h --color'
 elif [[ $(uname) == 'FreeBSD' ]]; then
 	alias ls='ls -h -G'
+elif [[ $(uname) == 'Darwin' ]]; then
+	alias ls='ls -h -G'
 else
 	echo "I have no 'ls'-alias for $(uname), please add one to $HOME/.zshrc"
 fi
