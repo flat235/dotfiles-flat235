@@ -51,11 +51,17 @@ alias la='ls -alh --color'
 alias rm='rm -i' # use trash-cli instead
 
 function greppkg(){
-grep -R $1 /etc/portage/
+	if [[ -d /etc/portage ]]; then
+		grep -R $1 /etc/portage/
+	fi
+	if [[ -d /usr/ports ]]; then
+		find /usr/ports -type d -depth 2 -iname "*$1*"
+	fi
 }
- function telnets(){
-	 openssl s_client -connect $1:$2
- }
+
+function telnets(){
+	openssl s_client -connect $1:$2
+}
 
 export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
 
