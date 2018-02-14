@@ -68,6 +68,9 @@ export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
 # keepass ssh agent integration
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keeagent.socket
 
+# source kontena completion if present
+which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
+
 # history settings
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000000
