@@ -50,6 +50,10 @@ alias ll='ls -lh --color'
 alias la='ls -alh --color'
 alias rm='rm -i' # use trash-cli instead
 
+function grepir(){
+	grep -R -i $2 $1
+}
+
 function greppkg(){
 	if [[ -d /etc/portage ]]; then
 		grep -R $1 /etc/portage/
