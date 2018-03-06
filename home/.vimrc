@@ -16,7 +16,7 @@ let g:dotspacevim_configuration_layers = [
 \  'syntax-checking'
 \]
 
-let g:dotspacevim_additional_plugins = [ 'jreybert/vimagit' ]
+let g:dotspacevim_additional_plugins = [ 'jreybert/vimagit', 'vim-airline/vim-airline' ]
 
 let g:dotspacevim_excluded_plugins = []
 
