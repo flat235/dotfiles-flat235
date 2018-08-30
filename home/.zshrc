@@ -70,7 +70,9 @@ function telnets(){
 export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
 
 # keepass ssh agent integration
-export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keeagent.socket
+if [[ -z $SSH_AUTH_SOCK ]]; then
+	export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keeagent.socket
+fi
 
 # source kontena completion if present
 which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
