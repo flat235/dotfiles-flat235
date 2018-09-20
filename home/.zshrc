@@ -67,6 +67,10 @@ function telnets(){
 	openssl s_client -connect $1:$2
 }
 
+function tls-verify(){
+	openssl s_client -connect $1:$2 2>/dev/null|grep "Verify return code:"
+}
+
 export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
 
 # keepass ssh agent integration
