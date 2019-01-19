@@ -40,6 +40,7 @@ if [[ $(uname) == 'Linux' ]]; then
 	alias ls='ls -h --color'
 elif [[ $(uname) == 'FreeBSD' ]]; then
 	alias ls='ls -h -G'
+	export IFCONFIG_FORMAT="inet:cidr,inet6:cidr"
 elif [[ $(uname) == 'Darwin' ]]; then
 	alias ls='ls -h -G'
 else
@@ -72,11 +73,6 @@ function tls-verify(){
 }
 
 export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
-
-# keepass ssh agent integration
-if [[ -z $SSH_AUTH_SOCK ]]; then
-	export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/keeagent.socket
-fi
 
 # source kontena completion if present
 which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
