@@ -8,7 +8,8 @@ for dir in $bindirs do
 	end
 end
 
-set EDITOR vim
+set --export EDITOR vim
+set --export TMUXSHELL (which fish)
 
 # package manager
 if not functions -q fisher
@@ -16,3 +17,4 @@ if not functions -q fisher
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
+
