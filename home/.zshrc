@@ -77,6 +77,10 @@ export TMUXSHELL=$(which zsh)
 
 # source kontena completion if present
 which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
+# source kubectl completion if present
+which kubectl > /dev/null && source <(kubectl completion zsh)
+
+[ -f $HOME/.localenv ] && . $HOME/.localenv
 
 # history settings
 HISTFILE="$HOME/.zsh_history"
