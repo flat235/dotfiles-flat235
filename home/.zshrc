@@ -34,6 +34,8 @@ antigen apply
 # aliases
 alias sudosu='sudo su -'
 alias tmux='tmux -2'
+alias ta='tmux attach -t'
+alias ts='tmux new-session -s'
 alias th='ta `hostname -s` || ts `hostname -s`'
 
 if [[ $(uname) == 'Linux' ]]; then
