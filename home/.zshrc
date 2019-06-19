@@ -73,6 +73,7 @@ function tls-verify(){
 }
 
 export PATH="$PATH:/usr/local/bin:$HOME/bin:$HOME/.cargo/bin"
+export TMUXSHELL=$(which zsh)
 
 # source kontena completion if present
 which kontena > /dev/null && . "$( kontena whoami --bash-completion-path )"
