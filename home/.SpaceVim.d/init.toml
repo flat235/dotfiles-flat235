@@ -42,7 +42,8 @@ name = 'git'
 name = 'sudo'
 
 [[layers]]
-name = 'denite'
+name = 'ctrlp'
+#name = 'denite'
 
 [[layers]]
 name = 'lang#rust'
