@@ -8,8 +8,16 @@ for dir in $bindirs do
 	end
 end
 
-set --export EDITOR vim
+if which nvim > /dev/null
+	set --export EDITOR nvim
+else
+	set --export EDITOR vim
+end
 set --export TMUXSHELL (which fish)
+
+if test -f $HOME/.localenv.fish
+	source $HOME/.localenv.fish
+end
 
 # package manager
 if not functions -q fisher
