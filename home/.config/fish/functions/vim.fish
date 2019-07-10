@@ -5,4 +5,5 @@ function vim --description 'nvim / vim / vi depending on availability'
     vim
   else
     vi
+  end
 end
