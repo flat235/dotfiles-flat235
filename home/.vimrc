@@ -20,6 +20,9 @@ call plug#end()
 
 let mapleader = ' '
 
+" airline config
+let g:airline_powerline_fonts = 1
+
 " CtrlP (fuzzy find) config
 noremap <Leader>f :CtrlPMixed<CR>
 " let g:ctrlp_map = '<c-p>'
