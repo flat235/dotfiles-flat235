@@ -29,7 +29,7 @@ let mapleader = ' '
 let g:airline_powerline_fonts = 1
 
 " CtrlP (fuzzy find) config
-noremap <Leader>f :CtrlPMixed<CR>
+nnoremap <Leader>f :CtrlPMixed<CR>
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'rc'
@@ -62,3 +62,11 @@ set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
 call system('mkdir -p $HOME/.vim/undo')
+
+" keybindings
+" buffers
+nnoremap <Leader>be :new<CR>
+nnoremap <Leader>bd :bdelete<CR>
+nnoremap <Leader>bo :edit 
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bp :bprevious<CR>
