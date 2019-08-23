@@ -18,6 +18,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch.vim'
 Plug 'vim-syntastic/syntastic'
 Plug 'sheerun/vim-polyglot'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 let mapleader = ' '
@@ -42,6 +45,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" editorconfig config
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
+
 
 colorscheme mustang
 
