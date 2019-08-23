@@ -1,12 +1,14 @@
 " -*- mode: vimrc -*-
 "vim: ft=vim
 
+" install / load plug (plugin manager)
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" install plugins
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
@@ -41,8 +43,15 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" personal customization
 colorscheme mustang
+
+" line numbers
 set number
 set relativenumber
 
+" persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+set undolevels=1000
+set undoreload=10000
+call system('mkdir -p $HOME/.vim/undo')
