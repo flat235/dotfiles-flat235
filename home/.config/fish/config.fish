@@ -1,7 +1,7 @@
 source $HOME/.homesick/repos/homeshick/homeshick.fish
 
 # PATH
-set bindirs $HOME/bin $HOME/.cargo/bin
+set bindirs $HOME/bin $HOME/.cargo/bin $HOME/flutter/bin $HOME/android-studio/bin
 for dir in $bindirs do
 	if test -d $dir
 		set PATH $dir $PATH
