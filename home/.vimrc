@@ -34,8 +34,12 @@ nnoremap <Leader>f :CtrlPMixed<CR>
 " let g:ctrlp_cmd = 'CtrlPMixed'
 let g:ctrlp_working_path_mode = 'rc'
 let g:ctrlp_switch_buffer = 'et'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](node_modules)|(\.(git|hg|svn))$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ }
+"  \ 'link': 'some_bad_symbolic_links',
 
 " Syntastic config
 set statusline+=%#warningmsg#
