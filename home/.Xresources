@@ -1,4 +1,6 @@
-xterm*background:       black
-xterm*foreground:       white
-Xcursor*theme:          ComixCursors-Red-Huge
-Emacs.font:		hack-11
+xterm*faceName: Source Code Pro for Powerline:style=Regular
+xterm*faceSize: 13
+xterm*renderFont: true
+xterm*background: #000000
+xterm*foreground: #cccccc
+Xft.dpi: 144
