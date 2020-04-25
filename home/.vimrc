@@ -12,7 +12,7 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'Raimondi/delimitMate'
-Plug 'jreybert/vimagit'
+"Plug 'jreybert/vimagit'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch.vim'
@@ -74,3 +74,4 @@ nnoremap <Leader>bd :bdelete<CR>
 nnoremap <Leader>bo :edit 
 nnoremap <Leader>bn :bnext<CR>
 nnoremap <Leader>bp :bprevious<CR>
+nnoremap <Leader>g :!lazygit<CR>
