@@ -3,4 +3,3 @@ xterm*faceSize: 13
 xterm*renderFont: true
 xterm*background: #000000
 xterm*foreground: #cccccc
-Xft.dpi: 144
