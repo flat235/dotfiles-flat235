@@ -16,7 +16,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'vim-airline/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'haya14busa/incsearch.vim'
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
@@ -41,15 +41,6 @@ let g:ctrlp_custom_ignore = {
   \ }
 "  \ 'link': 'some_bad_symbolic_links',
 
-" Syntastic config
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " editorconfig config
 let g:EditorConfig_exclude_patterns = ['fugitive://.\*', 'scp://.\*']
 
@@ -66,6 +57,22 @@ set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
 call system('mkdir -p $HOME/.vim/undo')
+
+" use system-clipboard (+ = ctrl-c/v, * = mouse sel)
+set clipboard=unnamedplus
+
+" warn on going over col 80
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v')
+
+" configure tab width to 4, don't expand tabs to spaces by default
+set tabstop=4
+set shiftwidth=4
+set noexpandtab
+
+" visual symbols
+set list
+set listchars=tab:→\ ,nbsp:␣,trail:•
 
 " keybindings
 " buffers
