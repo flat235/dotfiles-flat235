@@ -68,7 +68,7 @@ call matchadd('ColorColumn', '\%81v')
 " configure tab width to 4, don't expand tabs to spaces by default
 set tabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 
 " visual symbols
 set list
