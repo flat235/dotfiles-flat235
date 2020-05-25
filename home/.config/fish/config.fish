@@ -1,18 +1,18 @@
 source $HOME/.homesick/repos/homeshick/homeshick.fish
 
 # PATH
-set bindirs $HOME/bin $HOME/.cargo/bin $HOME/flutter/bin $HOME/android-studio/bin $HOME/.nimble/bin
+set bindirs $HOME/bin $HOME/.cargo/bin $HOME/android-studio/bin $HOME/.nimble/bin
 for dir in $bindirs do
-	if test -d $dir
-		set PATH $dir $PATH
-	end
+    if test -d $dir
+        set PATH $dir $PATH
+    end
 end
 
 set --export EDITOR vim
 set --export TMUXSHELL (which fish)
 
 if test -f $HOME/.localenv.fish
-	source $HOME/.localenv.fish
+    source $HOME/.localenv.fish
 end
 
 # package manager
