@@ -22,3 +22,5 @@ if not functions -q fisher
     fish -c fisher
 end
 
+# set vi mode
+fish_vi_key_bindings
