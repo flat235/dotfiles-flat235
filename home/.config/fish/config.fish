@@ -1,4 +1,5 @@
-source $HOME/.homesick/repos/homeshick/homeshick.fish
+source "$HOME/.homesick/repos/homeshick/homeshick.fish"
+source "$HOME/.homesick/repos/homeshick/completions/homeshick.fish"
 
 # PATH
 set bindirs $HOME/bin $HOME/.local/bin $HOME/.cargo/bin $HOME/android-studio/bin $HOME/.nimble/bin
