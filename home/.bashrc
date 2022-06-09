@@ -17,4 +17,5 @@ fi
 
 # Put your fun stuff here.
 export VISUAL="vim"
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 source "$HOME/.homesick/repos/homeshick/completions/homeshick-completion.bash"
