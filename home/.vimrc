@@ -21,6 +21,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'airblade/vim-gitgutter'
+Plug 'Fymyte/rasi.vim'
 call plug#end()
 
 let mapleader = ' '
@@ -71,7 +72,7 @@ set shiftwidth=4
 set expandtab
 
 " visual symbols
-set list
+" set list
 set listchars=tab:→\ ,nbsp:␣,trail:•
 
 " keybindings
