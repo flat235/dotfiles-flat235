@@ -1,0 +1,18 @@
+zsh-users/zsh-completions
+zsh-users/zsh-autosuggestions
+
+ohmyzsh/ohmyzsh path:lib
+ohmyzsh/ohmyzsh path:plugins/magic-enter
+ohmyzsh/ohmyzsh path:plugins/systemd
+
+Aloxaf/fzf-tab
+
+
+# prompt
+# with prompt plugins, remember to add this to your .zshrc:
+# #   `autoload -Uz promptinit && promptinit && prompt powerlevel10k`
+romkatv/powerlevel10k kind:fpath
+
+# these 2 last for some reason?
+zdharma-continuum/fast-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search
